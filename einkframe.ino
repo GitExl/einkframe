@@ -340,11 +340,11 @@ void loop() {
   const float v = measureBattery();
 
   // Very low battery.
-  if (v < 3.6) {
+  if (v < 3.5) {
     state = STATE_BLANK;
 
   // Low battery.
-  } else if (v < 3.7) {
+  } else if (v <= 3.55) {
     failBattery();
 
   // Resume from SD failure.
